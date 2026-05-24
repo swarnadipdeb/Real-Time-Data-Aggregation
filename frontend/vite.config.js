@@ -6,8 +6,8 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/rates': 'http://localhost:3001',
-      '/health': 'http://localhost:3001'
+      '/rates': process.env.VITE_API_BASE_URL || 'http://localhost:3001',
+      '/health': process.env.VITE_API_BASE_URL || 'http://localhost:3001'
     }
   }
 });

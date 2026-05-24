@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 
 const BASE_CURRENCIES = ['USD', 'EUR', 'GBP'];
-const API_BASE = '/rates';
+const API_BASE = `${import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001'}`;
 
 // Format seconds into human-readable age string
 function ageLabel(seconds) {
