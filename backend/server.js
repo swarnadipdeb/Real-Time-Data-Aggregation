@@ -5,7 +5,7 @@ const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+app.use(cors({ origin: ['http://localhost:5173', 'https://real-time-data-aggregation-3xkk.vercel.app'] }));
 
 // --- In-memory cache (always stores USD-based raw data) ---
 let cache = {
